@@ -1,0 +1,15 @@
+{
+  "name": "react-ship",
+  "version": "1.0.0",
+  "description": "A CLI tool to create React apps",
+  "main": "index.js",
+  "bin": {
+    "react-ship": "./bin/react-ship.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {}
+}
