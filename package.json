@@ -1,6 +1,6 @@
 {
   "name": "react-fire-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI tool to create React apps",
   "main": "react-fire-utils.js",
   "bin": {
