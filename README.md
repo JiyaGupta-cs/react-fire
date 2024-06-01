@@ -1,7 +1,7 @@
 <p align="center">
-  <h1 align="center">react-fire</h1>
+  <h1 align="center">react-fire-utils</h1>
 
-  ```react-fire``` provides a simple way to integrate firebase authentication in your app. After installing the package and configuring Firebase, it automatically creates a login/signup . You don't need to manually set up , It handles everything for you.
+  ```react-fire-utils``` provides a simple way to integrate firebase authentication in your app. After installing the package and configuring Firebase, it automatically creates a login/signup . You don't need to manually set up , It handles everything for you.
 
 </p>
 
@@ -18,7 +18,7 @@ npm install
 ## Installation
 
 ```
-npm install react-fire
+npm install react-fire-utils
 ```
 
 Create a Firebase project and grab the project configurations.
@@ -35,10 +35,10 @@ FIREBASE_APP_ID=
 
 ```
 
-Then create authentication using react-fire
+Then create authentication using react-fire-utils
 
 ```
-react-fire create-auth
+react-fire-utils create-auth
 ```
 
 ## Navigation
