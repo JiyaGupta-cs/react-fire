@@ -7,6 +7,8 @@ const { createLoginComponent } = require('./Login');
 const { createSignUpComponent } = require('./SignUp');
 const { createSignOutComponent } = require('./SignOut');
 const { createAppComponent } = require('./App');
+const { updateTailwindconfig } = require('./updateTailwindconfig');
+const { appendTailwindDirectives } = require('./appendTailwindDirectives');
 const { exec } = require('child_process');
 
 // Check if the command is 'create-auth'
@@ -35,17 +37,31 @@ if (process.argv[2] === 'create-auth') {
         }
       });
 
-            // Install tailwindcss
-            exec('npm install -D tailwindcss postcss autoprefixer npx tailwindcss init -p', (error, stdout, stderr) => {
-              if (error) {
-                console.error(`Error installing tailwindcss: ${error}`);
-                return;
-              }
-              console.log(`tailwindcss installed! ${stdout}`);
-              if (stderr) {
-                console.error(`npm stderr: ${stderr}`);
-              }
-            });
+            // Function to install Tailwind CSS and initialize its configuration file
+const installTailwindCSS = () => {
+  exec('npm install -D tailwindcss@latest postcss@latest autoprefixer@latest', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error installing Tailwind CSS: ${error}`);
+      return;
+    }
+    console.log(`Tailwind CSS installed! ${stdout}`);
+    if (stderr) {
+      console.error(`npm stderr: ${stderr}`);
+    }
+
+    // Initialize Tailwind CSS configuration file
+    exec('npx tailwindcss init -p', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error initializing Tailwind CSS configuration: ${error}`);
+        return;
+      }
+      console.log(`Tailwind CSS configuration file initialized! ${stdout}`);
+      if (stderr) {
+        console.error(`npm stderr: ${stderr}`);
+      }
+    });
+  });
+};
 
   // Call the createFirebaseFile function
   if (createFirebaseFile()) {
@@ -54,6 +70,9 @@ if (process.argv[2] === 'create-auth') {
     createSignUpComponent();
     createSignOutComponent();
     createLoginComponent();
+    installTailwindCSS();
+    updateTailwindconfig();
+    appendTailwindDirectives();
   }
 } else {
   console.log('Invalid command.');
