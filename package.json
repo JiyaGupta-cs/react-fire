@@ -1,15 +1,15 @@
 {
-  "name": "react-fire",
+  "name": "react-fire-utils",
   "version": "1.0.0",
   "description": "A CLI tool to create React apps",
-  "main": "react-fire.js",
+  "main": "react-fire-utils.js",
   "bin": {
-    "react-fire": "./bin/react-fire.js"
+    "react-fire-utils": "./bin/react-fire-utils.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Your Name",
+  "author": "Jiya Gupta",
   "license": "MIT",
   "dependencies": {}
 }
