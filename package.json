@@ -1,7 +1,7 @@
 {
   "name": "react-fire-utils",
   "version": "1.0.3",
-  "description": "A CLI tool to create React apps",
+  "description": "Simplify Firebase authentication in React with automatic setup and a ready-to-use login/signup page",
   "main": "react-fire-utils.js",
   "bin": {
     "react-fire-utils": "./bin/react-fire-utils.js"
@@ -11,5 +11,15 @@
   },
   "author": "Jiya Gupta",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "react",
+    "firebase",
+    "authentication",
+    "auth",
+    "signup",
+    "login",
+    "react-fire-utils",
+    "utils"
+  ]
 }
