@@ -35,6 +35,18 @@ if (process.argv[2] === 'create-auth') {
         }
       });
 
+            // Install tailwindcss
+            exec('npm install -D tailwindcss postcss autoprefixer npx tailwindcss init -p', (error, stdout, stderr) => {
+              if (error) {
+                console.error(`Error installing tailwindcss: ${error}`);
+                return;
+              }
+              console.log(`tailwindcss installed! ${stdout}`);
+              if (stderr) {
+                console.error(`npm stderr: ${stderr}`);
+              }
+            });
+
   // Call the createFirebaseFile function
   if (createFirebaseFile()) {
     createAppComponent();
